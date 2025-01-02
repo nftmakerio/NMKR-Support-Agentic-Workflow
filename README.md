@@ -1,54 +1,166 @@
-# NmkrSupportV4 Crew
+# NMKR Support AI Agent
 
-Welcome to the NmkrSupportV4 Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+An intelligent AI-powered support system for [NMKR](https://www.nmkr.io/), designed to provide automated, accurate responses to user queries about NMKR's products and services. This system uses CrewAI to orchestrate multiple AI agents that work together to provide comprehensive support responses.
 
-## Installation
+## Overview
 
-Ensure you have Python >=3.10 <=3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+This project implements an AI support system that:
+- Processes support requests through REST API and webhooks
+- Automatically crawls and analyzes NMKR documentation
+- Provides detailed, context-aware responses about NMKR services
+- Handles asynchronous processing with Redis queue
+- Integrates with Plain for customer support workflows
 
-First, if you haven't already, install uv:
+## Prerequisites
 
+- Docker and Docker Compose
+- Python 3.10 or higher
+- OpenAI API key
+- Plain webhook secret (for webhook integration)
+
+## Quick Start
+
+1. Clone the repository:
 ```bash
-pip install uv
+git clone <repository-url>
+cd nmkr_support_v4
 ```
 
-Next, navigate to your project directory and install the dependencies:
-
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
-
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
-- Modify `src/nmkr_support_v4/config/agents.yaml` to define your agents
-- Modify `src/nmkr_support_v4/config/tasks.yaml` to define your tasks
-- Modify `src/nmkr_support_v4/crew.py` to add your own logic, tools and specific args
-- Modify `src/nmkr_support_v4/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
-
-```bash
-$ crewai run
+2. Create a `.env` file with your credentials:
+```env
+MODEL=gpt-4o
+OPENAI_API_KEY=your_openai_api_key_here
+WEBHOOK_SECRET=your_webhook_secret_here
+ANTHROPIC_API_KEY=your_anthropic_key_here  # Optional
+SPIDER_API_KEY=your_spider_key_here        # Optional
+FIRECRAWL_API_KEY=your_firecrawl_key_here # Optional
 ```
 
-This command initializes the nmkr_support_v4 Crew, assembling the agents and assigning them tasks as defined in your configuration.
+3. Start using the convenience script:
+```bash
+chmod +x start.sh
+./start.sh
+```
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+Or manually with Docker Compose:
+```bash
+# Build and start services
+docker-compose up --build -d
 
-## Understanding Your Crew
+# View logs
+docker-compose logs -f
 
-The nmkr_support_v4 Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+# Stop services
+docker-compose down
+```
 
-## Support
+## API Endpoints
 
-For support, questions, or feedback regarding the NmkrSupportV4 Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+### Submit Support Request
+```bash
+curl -X POST "http://localhost:8000/api/support" \
+     -H "Content-Type: application/json" \
+     -d '{"query": "How much does it cost to do an Airdrop with NMKR?"}'
+```
 
-Let's create wonders together with the power and simplicity of crewAI.
+Response:
+```json
+{
+    "job_id": "123-456-789",
+    "status": "queued"
+}
+```
+
+### Check Request Status
+```bash
+curl "http://localhost:8000/api/support/status/123-456-789"
+```
+
+### Plain Webhook Integration
+```bash
+curl -X POST "http://localhost:8000/api/webhook" \
+     -H "Content-Type: application/json" \
+     -H "Plain-Workspace-Id: ws_123" \
+     -H "Plain-Event-Type: thread.created" \
+     -H "Plain-Event-Id: evt_123" \
+     -H "Plain-Signature: your-webhook-signature" \
+     -d '{
+       "id": "evt_123",
+       "type": "thread.created",
+       "payload": {
+         "message": {
+           "content": "How much does it cost to do an Airdrop with NMKR?"
+         }
+       }
+     }'
+```
+
+## Project Structure
+```
+nmkr_support_v4/
+├── src/
+│   └── nmkr_support_v4/
+│       ├── api.py                         # FastAPI application
+│       ├── crew.py                        # CrewAI configuration
+│       ├── queue_manager.py               # Redis queue management
+│       ├── tools/
+│       │   └── custom_tool.py            # Web crawling tools
+│       ├── links_with_descriptions.json   # NMKR links data
+│       └── docs_links_with_descriptions.json
+├── docker-compose.yml                     # Docker services configuration
+├── Dockerfile                            # Container build instructions
+├── requirements.txt                      # Python dependencies
+├── setup.py                             # Package configuration
+└── start.sh                             # Convenience startup script
+```
+
+## Development
+
+1. Install in development mode:
+```bash
+pip install -e .
+```
+
+2. Run locally without Docker:
+```bash
+# Start Redis
+redis-server
+
+# Start RQ worker
+rq worker nmkr_support
+
+# Start API
+uvicorn nmkr_support_v4.api:app --reload
+```
+
+## Configuration
+
+### Environment Variables
+- `MODEL`: OpenAI model to use (default: gpt-4o)
+- `OPENAI_API_KEY`: Your OpenAI API key
+- `WEBHOOK_SECRET`: Secret for Plain webhook verification
+- `REDIS_URL`: Redis connection URL (default: redis://localhost:6379)
+
+### Docker Services
+- **API**: FastAPI application serving endpoints
+- **Worker**: RQ worker processing support requests
+- **Redis**: Queue and cache management
+
+## Useful Links
+
+- [NMKR Website](https://www.nmkr.io/)
+- [NMKR Documentation](https://docs.nmkr.io/)
+- [NMKR Developer Portal](https://developer.nmkr.io/)
+- [CrewAI Documentation](https://docs.crewai.com/)
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+[Your chosen license]
