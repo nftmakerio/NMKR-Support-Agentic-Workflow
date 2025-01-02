@@ -17,12 +17,14 @@ REDIS_URL = os.getenv('REDIS_URL', 'redis://localhost:6379')
 def get_redis_connection():
     """Get or create Redis connection"""
     try:
-        conn = Redis.from_url(REDIS_URL)
-        conn.ping()  # Test connection
+        logger.info(f"Attempting to connect to Redis at: {REDIS_URL}")
+        conn = Redis.from_url(REDIS_URL, decode_responses=True)
+        conn.ping()
         logger.info("Successfully connected to Redis")
         return conn
     except Exception as e:
-        logger.error(f"Failed to connect to Redis: {e}")
+        logger.error(f"Failed to connect to Redis at {REDIS_URL}: {e}")
+        logger.error(f"Environment variables: {os.environ}")
         raise
 
 def get_queue():

@@ -170,6 +170,11 @@ async def health_check():
             },
             "port": PORT,
             "redis_url": REDIS_URL.replace(REDIS_URL.split('@')[-1], '***') if '@' in REDIS_URL else "redis://***",
+            "environment": {
+                "has_redis_url": "REDIS_URL" in os.environ,
+                "has_openai_key": "OPENAI_API_KEY" in os.environ,
+                "has_webhook_secret": "WEBHOOK_SECRET" in os.environ,
+            }
         }
         return status
     except Exception as e:
@@ -179,6 +184,11 @@ async def health_check():
             "error": str(e),
             "timestamp": datetime.utcnow().isoformat(),
             "redis_url": REDIS_URL.replace(REDIS_URL.split('@')[-1], '***') if '@' in REDIS_URL else "redis://***",
+            "environment": {
+                "has_redis_url": "REDIS_URL" in os.environ,
+                "has_openai_key": "OPENAI_API_KEY" in os.environ,
+                "has_webhook_secret": "WEBHOOK_SECRET" in os.environ,
+            }
         }
 
 if __name__ == "__main__":

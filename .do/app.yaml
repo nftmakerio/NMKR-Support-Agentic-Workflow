@@ -18,15 +18,21 @@ services:
     envs:
       - key: REDIS_URL
         scope: RUN_TIME
+        type: SECRET
         value: ${redis.DATABASE_URL}
       - key: OPENAI_API_KEY
         scope: RUN_TIME
+        type: SECRET
         value: ${OPENAI_API_KEY}
       - key: WEBHOOK_SECRET
         scope: RUN_TIME
+        type: SECRET
         value: ${WEBHOOK_SECRET}
       - key: PORT
         value: "8080"
+    depends_on:
+      - name: redis
+        type: database
 
   - name: worker
     dockerfile_path: Dockerfile
@@ -35,13 +41,21 @@ services:
     envs:
       - key: REDIS_URL
         scope: RUN_TIME
+        type: SECRET
         value: ${redis.DATABASE_URL}
       - key: OPENAI_API_KEY
         scope: RUN_TIME
+        type: SECRET
         value: ${OPENAI_API_KEY}
+    depends_on:
+      - name: redis
+        type: database
 
 databases:
   - name: redis
     engine: REDIS
     version: "6"
-    production: true 
+    production: true
+    cluster_name: redis-cluster
+    db_name: nmkr_support
+    private_network_uuid: ${_self.DATABASE_PRIVATE_URL} 
