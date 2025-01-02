@@ -23,7 +23,9 @@ def get_redis_connection():
             REDIS_URL,
             decode_responses=True,
             socket_timeout=5,
-            socket_connect_timeout=5
+            socket_connect_timeout=5,
+            charset="utf-8",
+            encoding="utf-8"
         )
         # Test connection
         conn.ping()
@@ -46,8 +48,15 @@ def process_support_request(inputs: Dict[str, Any]) -> Dict[str, Any]:
         job.meta['status'] = 'processing'
         job.save_meta()
 
+        # Ensure proper encoding of input data
+        sanitized_inputs = {
+            'support_request': str(inputs['support_request']),
+            'links_data': str(inputs['links_data']),
+            'docs_links_data': str(inputs['docs_links_data'])
+        }
+
         from nmkr_support_v4.crew import crew
-        result = crew.kickoff(inputs=inputs)
+        result = crew.kickoff(inputs=sanitized_inputs)
 
         response = {
             'status': 'completed',
@@ -59,6 +68,7 @@ def process_support_request(inputs: Dict[str, Any]) -> Dict[str, Any]:
         return response
 
     except Exception as e:
+        logger.error(f"Error processing request: {str(e)}")
         error_response = {
             'status': 'failed',
             'error': str(e),
@@ -70,13 +80,23 @@ def process_support_request(inputs: Dict[str, Any]) -> Dict[str, Any]:
 
 def enqueue_request(inputs: Dict[str, Any]) -> str:
     """Add request to queue and return job ID"""
-    queue = get_queue()
-    job = queue.enqueue(
-        'nmkr_support_v4.queue_manager.process_support_request',
-        args=(inputs,),
-        job_timeout='1h'
-    )
-    return job.id
+    try:
+        # Ensure all input data is properly encoded
+        sanitized_inputs = {
+            key: str(value) if isinstance(value, str) else value
+            for key, value in inputs.items()
+        }
+        
+        queue = get_queue()
+        job = queue.enqueue(
+            'nmkr_support_v4.queue_manager.process_support_request',
+            args=(sanitized_inputs,),
+            job_timeout='1h'
+        )
+        return job.id
+    except Exception as e:
+        logger.error(f"Error enqueueing request: {str(e)}")
+        raise
 
 def get_job_status(job_id: str) -> Optional[Dict[str, Any]]:
     """Get the status of a job by its ID"""
@@ -94,13 +114,13 @@ def get_job_status(job_id: str) -> Optional[Dict[str, Any]]:
         }
 
         if job.is_finished:
-            status.update(job.meta)
+            status.update({k: str(v) for k, v in job.meta.items()})
         elif job.is_failed:
             status['error'] = str(job.exc_info)
 
         return status
     except Exception as e:
-        logger.error(f"Error fetching job status: {e}")
+        logger.error(f"Error fetching job status: {str(e)}")
         return {
             'id': job_id,
             'status': 'error',
