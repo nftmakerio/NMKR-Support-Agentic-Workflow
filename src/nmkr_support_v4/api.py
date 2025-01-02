@@ -10,6 +10,7 @@ import hashlib
 import json
 from datetime import datetime
 import redis
+import os
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -148,6 +149,9 @@ async def get_support_request_status(job_id: str):
         raise HTTPException(status_code=404, detail="Job not found")
     return status
 
+# Get port from environment variable with fallback
+PORT = int(os.getenv('PORT', 8080))
+
 @app.get("/health")
 async def health_check():
     """
@@ -164,10 +168,12 @@ async def health_check():
             "services": {
                 "api": "healthy",
                 "redis": "healthy" if redis_info else "unhealthy"
-            }
+            },
+            "port": PORT
         }
         return status
     except Exception as e:
+        logger.error(f"Health check failed: {e}")
         return {
             "status": "unhealthy",
             "error": str(e),
@@ -176,4 +182,4 @@ async def health_check():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000) 
+    uvicorn.run(app, host="0.0.0.0", port=PORT) 

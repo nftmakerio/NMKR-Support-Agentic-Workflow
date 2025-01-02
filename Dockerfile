@@ -15,5 +15,8 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install -e .
 
+# Set the PORT environment variable
+ENV PORT=8080
+
 # Default command (can be overridden in docker-compose.yml)
-CMD ["uvicorn", "nmkr_support_v4.api:app", "--host", "0.0.0.0", "--port", "8000"] 
+CMD ["uvicorn", "nmkr_support_v4.api:app", "--host", "0.0.0.0", "--port", "8080"] 

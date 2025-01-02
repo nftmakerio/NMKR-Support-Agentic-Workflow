@@ -7,10 +7,14 @@ services:
       branch: main
       deploy_on_push: true
       repo: your-repo/nmkr-support-v4
+    http_port: 8080
     health_check:
       http_path: /health
-      initial_delay_seconds: 30
-      period_seconds: 60
+      initial_delay_seconds: 60
+      period_seconds: 30
+      timeout_seconds: 10
+      success_threshold: 1
+      failure_threshold: 3
     envs:
       - key: REDIS_URL
         value: ${REDIS_URL}
@@ -18,6 +22,8 @@ services:
         value: ${OPENAI_API_KEY}
       - key: WEBHOOK_SECRET
         value: ${WEBHOOK_SECRET}
+      - key: PORT
+        value: "8080"
 
 databases:
   - name: redis
