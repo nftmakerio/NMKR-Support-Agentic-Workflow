@@ -23,9 +23,7 @@ def get_redis_connection():
             REDIS_URL,
             decode_responses=True,
             socket_timeout=5,
-            socket_connect_timeout=5,
-            charset="utf-8",
-            encoding="utf-8"
+            socket_connect_timeout=5
         )
         # Test connection
         conn.ping()
