@@ -1,3 +1,8 @@
+# Logs
+*.log
+app*.log
+*copy.json
+
 # Environment variables
 .env
 
@@ -27,9 +32,6 @@ wheels/
 venv/
 .venv/
 ENV/
-
-# Logs
-*.log
 
 # IDE
 .idea/

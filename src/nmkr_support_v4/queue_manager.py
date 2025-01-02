@@ -12,19 +12,26 @@ logger = logging.getLogger(__name__)
 
 # Get Redis URL from environment with fallback
 REDIS_URL = os.getenv('REDIS_URL', 'redis://localhost:6379')
+logger.info(f"Configured Redis URL: {REDIS_URL.split('@')[0]}@***")
 
 @lru_cache()
 def get_redis_connection():
     """Get or create Redis connection"""
     try:
-        logger.info(f"Attempting to connect to Redis at: {REDIS_URL}")
-        conn = Redis.from_url(REDIS_URL, decode_responses=True)
+        logger.info("Attempting to connect to Redis...")
+        conn = Redis.from_url(
+            REDIS_URL,
+            decode_responses=True,
+            socket_timeout=5,
+            socket_connect_timeout=5
+        )
+        # Test connection
         conn.ping()
         logger.info("Successfully connected to Redis")
         return conn
     except Exception as e:
-        logger.error(f"Failed to connect to Redis at {REDIS_URL}: {e}")
-        logger.error(f"Environment variables: {os.environ}")
+        logger.error(f"Failed to connect to Redis: {str(e)}")
+        logger.error(f"Redis URL format: {REDIS_URL.split('@')[0]}@***")
         raise
 
 def get_queue():

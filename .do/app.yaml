@@ -19,7 +19,7 @@ services:
       - key: REDIS_URL
         scope: RUN_TIME
         type: SECRET
-        value: ${redis.DATABASE_URL}
+        value: ${db.DATABASE_URL}
       - key: OPENAI_API_KEY
         scope: RUN_TIME
         type: SECRET
@@ -42,7 +42,7 @@ services:
       - key: REDIS_URL
         scope: RUN_TIME
         type: SECRET
-        value: ${redis.DATABASE_URL}
+        value: ${db.DATABASE_URL}
       - key: OPENAI_API_KEY
         scope: RUN_TIME
         type: SECRET
@@ -55,7 +55,4 @@ databases:
   - name: redis
     engine: REDIS
     version: "6"
-    production: true
-    cluster_name: redis-cluster
-    db_name: nmkr_support
-    private_network_uuid: ${_self.DATABASE_PRIVATE_URL} 
+    production: true 

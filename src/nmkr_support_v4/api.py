@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, Header, Request
 from pydantic import BaseModel
 # Update the import path
 from nmkr_support_v4.crew import validate_support_request
-from nmkr_support_v4.queue_manager import enqueue_request, get_job_status, get_redis_connection
+from nmkr_support_v4.queue_manager import enqueue_request, get_job_status, get_redis_connection, REDIS_URL
 import logging
 from typing import Optional, Dict, Any
 import hmac
@@ -188,6 +188,39 @@ async def health_check():
                 "has_redis_url": "REDIS_URL" in os.environ,
                 "has_openai_key": "OPENAI_API_KEY" in os.environ,
                 "has_webhook_secret": "WEBHOOK_SECRET" in os.environ,
+            }
+        }
+
+@app.get("/redis-status")
+async def redis_status():
+    """Detailed Redis status check"""
+    try:
+        # Get Redis connection
+        redis_conn = get_redis_connection()
+        info = redis_conn.info()
+        
+        return {
+            "status": "connected",
+            "redis_info": {
+                "version": info.get("redis_version"),
+                "connected_clients": info.get("connected_clients"),
+                "used_memory_human": info.get("used_memory_human"),
+                "total_connections_received": info.get("total_connections_received"),
+            },
+            "redis_url": REDIS_URL.replace(REDIS_URL.split('@')[-1], '***') if '@' in REDIS_URL else "redis://***",
+            "environment": {
+                "has_redis_url": "REDIS_URL" in os.environ,
+                "redis_url_value": os.environ.get("REDIS_URL", "not_set")[:10] + "..." if os.environ.get("REDIS_URL") else "not_set"
+            }
+        }
+    except Exception as e:
+        logger.error(f"Redis status check failed: {e}")
+        return {
+            "status": "error",
+            "error": str(e),
+            "environment": {
+                "has_redis_url": "REDIS_URL" in os.environ,
+                "redis_url_value": os.environ.get("REDIS_URL", "not_set")[:10] + "..." if os.environ.get("REDIS_URL") else "not_set"
             }
         }
 
