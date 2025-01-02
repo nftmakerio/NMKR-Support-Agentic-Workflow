@@ -8,6 +8,8 @@ from typing import Optional, Dict, Any
 import hmac
 import hashlib
 import json
+from datetime import datetime
+import redis
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -148,7 +150,29 @@ async def get_support_request_status(job_id: str):
 
 @app.get("/health")
 async def health_check():
-    return {"status": "healthy"}
+    """
+    Health check endpoint that verifies all required services are running
+    """
+    try:
+        # Check Redis connection
+        redis_info = redis_conn.info()
+        
+        # Basic application status
+        status = {
+            "status": "healthy",
+            "timestamp": datetime.utcnow().isoformat(),
+            "services": {
+                "api": "healthy",
+                "redis": "healthy" if redis_info else "unhealthy"
+            }
+        }
+        return status
+    except Exception as e:
+        return {
+            "status": "unhealthy",
+            "error": str(e),
+            "timestamp": datetime.utcnow().isoformat()
+        }, 500
 
 if __name__ == "__main__":
     import uvicorn

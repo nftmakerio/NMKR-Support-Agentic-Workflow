@@ -1,0 +1,25 @@
+name: nmkr-support-agent
+services:
+  - name: api
+    dockerfile_path: Dockerfile
+    source_dir: .
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: your-repo/nmkr-support-v4
+    health_check:
+      http_path: /health
+      initial_delay_seconds: 30
+      period_seconds: 60
+    envs:
+      - key: REDIS_URL
+        value: ${REDIS_URL}
+      - key: OPENAI_API_KEY
+        value: ${OPENAI_API_KEY}
+      - key: WEBHOOK_SECRET
+        value: ${WEBHOOK_SECRET}
+
+databases:
+  - name: redis
+    engine: REDIS
+    version: "6" 
