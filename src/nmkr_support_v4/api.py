@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, Header, Request
 from pydantic import BaseModel
 # Update the import path
 from nmkr_support_v4.crew import validate_support_request
-from nmkr_support_v4.queue_manager import enqueue_request, get_job_status
+from nmkr_support_v4.queue_manager import enqueue_request, get_job_status, get_redis_connection
 import logging
 from typing import Optional, Dict, Any
 import hmac
@@ -154,15 +154,13 @@ PORT = int(os.getenv('PORT', 8080))
 
 @app.get("/health")
 async def health_check():
-    """
-    Health check endpoint that verifies all required services are running
-    """
+    """Health check endpoint that verifies all required services are running"""
     try:
-        # Check Redis connection
+        # Get Redis connection
+        redis_conn = get_redis_connection()
         redis_info = redis_conn.info()
         redis_status = "healthy" if redis_info else "unhealthy"
         
-        # Basic application status
         status = {
             "status": "healthy" if redis_status == "healthy" else "unhealthy",
             "timestamp": datetime.utcnow().isoformat(),
@@ -181,7 +179,7 @@ async def health_check():
             "error": str(e),
             "timestamp": datetime.utcnow().isoformat(),
             "redis_url": REDIS_URL.replace(REDIS_URL.split('@')[-1], '***') if '@' in REDIS_URL else "redis://***",
-        }, 500
+        }
 
 if __name__ == "__main__":
     import uvicorn
