@@ -19,9 +19,10 @@ def get_redis_connection():
     """Get or create Redis connection"""
     try:
         logger.info("Attempting to connect to Redis...")
+        # For RQ worker, we don't want decode_responses=True
         conn = Redis.from_url(
             REDIS_URL,
-            decode_responses=True,
+            decode_responses=False,  # Changed this to False for RQ compatibility
             socket_timeout=5,
             socket_connect_timeout=5
         )
@@ -48,9 +49,9 @@ def process_support_request(inputs: Dict[str, Any]) -> Dict[str, Any]:
 
         # Ensure proper encoding of input data
         sanitized_inputs = {
-            'support_request': str(inputs['support_request']),
-            'links_data': str(inputs['links_data']),
-            'docs_links_data': str(inputs['docs_links_data'])
+            'support_request': inputs['support_request'],
+            'links_data': inputs['links_data'],
+            'docs_links_data': inputs['docs_links_data']
         }
 
         from nmkr_support_v4.crew import crew
@@ -58,7 +59,7 @@ def process_support_request(inputs: Dict[str, Any]) -> Dict[str, Any]:
 
         response = {
             'status': 'completed',
-            'result': str(result),
+            'result': result,  # Don't convert to string here
             'completed_at': datetime.utcnow().isoformat()
         }
         job.meta.update(response)
@@ -79,16 +80,10 @@ def process_support_request(inputs: Dict[str, Any]) -> Dict[str, Any]:
 def enqueue_request(inputs: Dict[str, Any]) -> str:
     """Add request to queue and return job ID"""
     try:
-        # Ensure all input data is properly encoded
-        sanitized_inputs = {
-            key: str(value) if isinstance(value, str) else value
-            for key, value in inputs.items()
-        }
-        
         queue = get_queue()
         job = queue.enqueue(
             'nmkr_support_v4.queue_manager.process_support_request',
-            args=(sanitized_inputs,),
+            args=(inputs,),  # Pass inputs directly
             job_timeout='1h'
         )
         return job.id
@@ -103,6 +98,7 @@ def get_job_status(job_id: str) -> Optional[Dict[str, Any]]:
         if not job:
             return None
 
+        # Basic status info
         status = {
             'id': job.id,
             'status': job.get_status(),
@@ -111,10 +107,21 @@ def get_job_status(job_id: str) -> Optional[Dict[str, Any]]:
             'ended_at': job.ended_at.isoformat() if job.ended_at else None,
         }
 
-        if job.is_finished:
-            status.update({k: str(v) for k, v in job.meta.items()})
-        elif job.is_failed:
-            status['error'] = str(job.exc_info)
+        # Handle job meta data
+        try:
+            if job.is_finished and job.meta:
+                meta = job.meta
+                if isinstance(meta.get('result'), bytes):
+                    meta['result'] = meta['result'].decode('utf-8')
+                status.update(meta)
+            elif job.is_failed:
+                exc_info = job.exc_info
+                if isinstance(exc_info, bytes):
+                    exc_info = exc_info.decode('utf-8')
+                status['error'] = exc_info
+        except UnicodeDecodeError as e:
+            logger.error(f"Error decoding job meta: {e}")
+            status['error'] = "Error decoding job result"
 
         return status
     except Exception as e:
