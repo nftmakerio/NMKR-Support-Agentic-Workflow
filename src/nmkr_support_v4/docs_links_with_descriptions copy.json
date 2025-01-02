@@ -1,0 +1,578 @@
+[
+    {
+        "url": "https://docs.nmkr.io/",
+        "description": "The content is an introduction to NMKR Docs with information about different products such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, along with support options like creating a support ticket, email, and"
+    },
+    {
+        "url": "https://docs.nmkr.io/helpful-links/cardano-nft-ressources",
+        "description": "The content discusses resources related to NFTs on the Cardano blockchain, specifically focusing on NMKR Docs and various products and services offered by NMKR Studio, including Mint, Pay, Token, and Pool, as well as explaining concepts like IPFS"
+    },
+    {
+        "url": "https://docs.nmkr.io/helpful-links/cardano-resources",
+        "description": "The content contains information on Cardano resources and NMKR Docs, including products such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, NMKR Pool, while also offering support ticket creation, contact details, and information on"
+    },
+    {
+        "url": "https://docs.nmkr.io/helpful-links/cardano-wallets",
+        "description": "The content discusses different products related to Cardano wallets, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, as well as providing support options such as creating support tickets, email, and Discord communication"
+    },
+    {
+        "url": "https://docs.nmkr.io/helpful-links/deal-with-bots",
+        "description": "The content provides information about a website called NMKR Docs offering resources, support, and products related to NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool among other services, with a special focus on N"
+    },
+    {
+        "url": "https://docs.nmkr.io/helpful-links/open-source-repositories",
+        "description": "The content is about open source repositories related to NMKR Docs, which include information on products such as NMKR Studio, NMKR Mint, NMKR Pay, and NMKR Token, as well as features and contact options."
+    },
+    {
+        "url": "https://docs.nmkr.io/helpful-links/security-practices",
+        "description": "This document provides information on security practices for NMKR products and services, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool."
+    },
+    {
+        "url": "https://docs.nmkr.io/introduction/about-nmkr",
+        "description": "NMKR Docs provides information about NMKR products such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, as well as explanations of NFTs, IPFS, and the use of Cardano"
+    },
+    {
+        "url": "https://docs.nmkr.io/introduction/powered-by-nmkr",
+        "description": "NMKR Docs is a platform that offers various products and services like NMKR Studio, Mint, Pay, Token, and Pool, as well as support features such as creating support tickets, contacting via email or Discord, and it provides information about NMKR"
+    },
+    {
+        "url": "https://docs.nmkr.io/introduction/what-is-an-nft",
+        "description": "An NFT, or non-fungible token, is a unique digital asset that is stored on a blockchain and represents ownership of a specific item such as artwork, collectibles, or games."
+    },
+    {
+        "url": "https://docs.nmkr.io/introduction/what-is-an-nft/what-is-ipfs",
+        "description": "IPFS is a decentralized protocol that is used for storing and sharing data on the internet in a secure and efficient manner."
+    },
+    {
+        "url": "https://docs.nmkr.io/introduction/why-cardano",
+        "description": "The article discusses the reasons for choosing Cardano as a platform."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-mint/introduction-nmkr-mint",
+        "description": "NMKR Docs provides information on various NMKR products and services, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, in both English and Japanese languages."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-mint/mint-collection",
+        "description": "The content discusses various products and services offered by NMKR, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, along with general information about NFTs and IPFS technology."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-mint/mint-single-nfts",
+        "description": "This text discusses the features and offerings of NMKR Docs, including NMKR Studio, Mint, Pay, Token, and Pool services in English and Japanese, focusing on creating, supporting, and searching for products and documentation regarding non-fungible tokens."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-playground/ada-payment-link",
+        "description": "The content is about ADA payment links on the NMKR Documentation website and also lists different products and features available on the site."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-playground/introduction-nmkr-playground",
+        "description": "The content introduces NMKR Playground, a hub for various products and services like NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, along with providing information on NFTs, IPFS, and the"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-playground/paperwallet",
+        "description": "The content is about NMKR Docs which provides information on products like NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, as well as features overview and support options."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-pool/stake-with-nmkr-pool",
+        "description": "The content discusses various sections and products available on the NMKR website."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-pool/what-is-staking",
+        "description": "Staking refers to the process of participating in a blockchain network by locking up cryptocurrency to support the network's operations, for which contributors receive rewards in return."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-examples",
+        "description": "The content is about various products and features available on NMKR Docs, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with information on creating support tickets, contact options, and learning about NM"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-examples/minting",
+        "description": "NMKR Docs provides information and resources related to NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with details on NFTs, IPFS, and the use of Cardano."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-examples/minting/manual-minting",
+        "description": "The content is about a page titled \"NMKR Docs\" that provides information on NMKR products, such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with details on features and functionalities."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-examples/payment",
+        "description": "The content is about the payment options and various products offered by NMKR Docs, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with information on how to create a support ticket, contact the"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-examples/payment/create-nmkr-pay-link-for-a-multi-specific-tokens-sale",
+        "description": "The content discusses creating a NMKR Pay Link for a sale involving multiple specific tokens within the NMKR ecosystem."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-examples/payment/create-nmkr-pay-link-for-specific-token-sales",
+        "description": "A NMKR Pay Link can be created for specific Token sales using the NMKR Docs platform, which includes products such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-examples/payment/create-unique-nmkr-pay-link-for-random-token-sales",
+        "description": "NMKR Docs provides information about NMKR products, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, and offers support through email and Discord."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-examples/payment/get-payment-address-for-single-nft-sales-with-native-tokens",
+        "description": "The content provides information on how to get payment address for single NFT sales using native tokens in the NMKR ecosystem."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-examples/project",
+        "description": "The content includes information about NMKR Docs, NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, NMKR Pool, support options, and basic guides on NFTs, IPFS, and Cardano-related topics."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-examples/project/create-project",
+        "description": "The content is about creating a project in NMKR Docs, an English and Japanese platform that includes products like NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with options for support through email, Discord"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-examples/project/upload-file-and-metadata",
+        "description": "The content is about uploading a file and metadata in NMKR Docs, providing information on various products and services offered by NMKR, along with a section on creating support tickets, contacting, and searching information in English and Japanese."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-examples/smart-contract",
+        "description": "The content provides information about various products and features offered by NMKR, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, NMKR Pool, and outlines instructions on how to navigate and use their platform."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-examples/smart-contract/secondary-sales-via-nmkr-pay",
+        "description": "NMKR offers various products and services such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, supporting NFTs and powered by Cardano."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-features",
+        "description": "The content provides an overview of the features and products offered by NMKR Docs, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with support options such as creating a support ticket or contacting via"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-open-source-contributions",
+        "description": "The content discusses open source contributions to NMKR Docs, various products like NMKR Studio, Mint, Pay, and Token, as well as information on what is NFT, IPFS, and why Cardano is used."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-swagger",
+        "description": "The content is about API documentation for NMKR products, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, available in both English and Japanese languages, with resources like a support ticket system, email"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-swagger/get-started-with-the-swagger",
+        "description": "This content provides an introduction to the Swagger documentation for NMKR products, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with information about NFTs, IPFS, and Cardano integration"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/api-swagger/swagger-responses-and-error-codes",
+        "description": "The content covers information about Swagger responses, error codes, and various products offered by NMKR, along with contact details and support options."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/get-started-with-the-api",
+        "description": "The NMKR documentation provides information and resources for products such as NMKR Studio, NMKR Mint, and NMKR Pay, along with support options like creating a support ticket, contacting via email or Discord, and searching for specific information."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio-api/introduction-nmkr-studio-api",
+        "description": "The content discusses the features and offerings of NMKR Studio API and other products, including NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, as well as providing information on how to create support tickets and get in touch."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/account",
+        "description": "NMKR Docs is a platform offering support and documentation for NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with resources available in English and Japanese."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/account/api-keys",
+        "description": "The content is an introduction to NMKR Docs, NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, focusing on NFTs, IPFS, and Cardano integration, with an overview of NM"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/account/dashboard",
+        "description": "The content on the NMKR Docs dashboard encompasses information regarding NMKR products such as Studio, Mint, Pay, Token, and Pool, as well as resources for support and learning about NMKR tools."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/account/invoices",
+        "description": "NMKR Docs website offers information about NMKR products, including NMKR Studio, NMKR Mint, NMKR Pay, and NMKR Token, as well as guides and support services related to NFTs, IPFS, Cardano, and NM"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/account/mint-coupons",
+        "description": "The content discusses the various products and services offered by NMKR, including Mint, Studio, Pay, Token, and Pool, as well as provides information about their support options and guides on using NMKR Studio."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/account/registration-and-kyc",
+        "description": "NMKR Docs provides information in English and Japanese about products such as NMKR Studio, NMKR Mint, NMKR Pay, and NMKR Token, as well as features and support options."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/account/security",
+        "description": "The content is about the security measures available on NMKR Docs website along with the list of products and features offered by NMKR Studio."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/account/transactions",
+        "description": "There is a website called NMKR Docs containing information on various NMKR products, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, as well as details on NFTs, IPFS,"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/account/wallets",
+        "description": "NMKR Docs provides information on various products such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, including an introduction to NFTs, IPFS, and Cardano, with features and tutorials"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/features-overview",
+        "description": "NMKR Docs offers information on various products like NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, along with contact details and support options."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/how-to-quick-start-tutorials",
+        "description": "NMKR Docs offers quick start tutorials for NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, in English and Japanese, with contact options for support such as creating a support ticket via email or Discord."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/how-to-quick-start-tutorials/guidelines-planning-a-project",
+        "description": "The content discusses guidelines for planning a project and information on various products and services offered by NMKR Docs in multiple languages."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/how-to-quick-start-tutorials/how-to-add-tokens",
+        "description": "The content provides information on adding tokens to NMKR through various platforms such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with resources available in English and Japanese."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/how-to-quick-start-tutorials/how-to-airdrop-tokens",
+        "description": "The content provides information about how to airdrop tokens in NMKR Docs, which includes products such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, along with support options like creating a support"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/how-to-quick-start-tutorials/how-to-burn-tokens",
+        "description": "The content provides information on how to burn tokens and other related products and services offered by NMKR Docs."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/how-to-quick-start-tutorials/how-to-do-a-reveal",
+        "description": "The content provides guidance on how to do a reveal with NMKR Docs NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool in English and Japanese."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/how-to-quick-start-tutorials/how-to-enable-dids",
+        "description": "The content discusses how to enable DIDs on the NMKR platform and provides links to NMKR Studio, Mint, Pay, Token, and Pool, as well as contact options like email and Discord for support."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/how-to-quick-start-tutorials/how-to-enable-royalties",
+        "description": "The content is about enabling royalties on NMKR products and services through NMKR Docs website."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/how-to-quick-start-tutorials/how-to-sell-tokens",
+        "description": "The content provides information on how to sell tokens and introduces various products and services offered by NMKR Docs."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/how-to-quick-start-tutorials/how-to-set-up-metadata",
+        "description": "This content explains how to set up metadata for NMKR products in multiple languages on the NMKR Docs website including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with options for creating support tickets via"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/how-to-quick-start-tutorials/how-to-set-up-sales-conditions",
+        "description": "This content provides guidance on setting up sales conditions and features of the NMKR Studio."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/how-to-quick-start-tutorials/how-to-set-up-whitelisting",
+        "description": "The article provides steps on configuring whitelisting settings on NMKR products and platforms from the NMKR documentation website."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/how-to-quick-start-tutorials/quickstart-full-video-tutorial",
+        "description": "The full video tutorial by NMKR Docs provides information on products such as NMKR Studio, Mint, Pay, Token, and Pool, as well as offering support and tutorials in English and Japanese."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/introduction-nmkr-studio",
+        "description": "NMKR Studio offers a variety of products and services such as NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, along with providing information on topics like NFTs and IPFS, all powered by Cardano."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/learn-nmkr-studio-in-3-minutes",
+        "description": "Quickly learn about NMKR Studio features and overview, along with other products like NMKR Mint, Pay, Token, and Pool through NMKR Docs in English and Japanese."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/learn-nmkr-studio-in-3-minutes/basic-workflow",
+        "description": "NMKR Docs provides documentation and support for NMKR products such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool in multiple languages and platforms."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/minting",
+        "description": "NMKR Docs provides information about NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, offering guidance on the NFT platform and cardano ecosystem."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/minting/airdropper",
+        "description": "NMKR Docs provides information and resources about NMKR's products and services, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, along with support options like creating a support ticket, contacting via email"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/minting/airdropper/airdrop-with-random-distribution",
+        "description": "NMKR Docs offers various products and services, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with support available through creating a support ticket, email, or Discord."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/minting/airdropper/airdrop-with-specific-distribution",
+        "description": "The content is about an airdrop with specific distribution on NMKR platform and its products."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/minting/manual-minting",
+        "description": "NMKR Docs offer documentation in multiple languages for the products NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, providing support and information related to NFTs, IPFS, Cardano, and the"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/minting/minting-on-demand",
+        "description": "The content discusses the on-demand minting feature offered by NMKR, along with other NMKR products and services available in English and Japanese through NMKR Docs."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/pricing",
+        "description": "The content provides information on pricing, various products offered by NMKR, ways to contact support, and introductory information about NMKR Docs and Studio."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project",
+        "description": "The content is about the documentation for NMKR that includes information about its products, support channels, and detailed instructions on using NMKR Studio."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/additional-payout-wallets",
+        "description": "NMKR Docs provides information on additional payout wallets and other products available within the NMKR ecosystem."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/affiliate-links",
+        "description": "The content includes information about affiliate links and various products and services offered by NMKR, with an introduction to NMKR Docs and details about NMKR Studio."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/create",
+        "description": "The content summarizes the services and products offered by NMKR in both English and Japanese, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with access to support through creating a support ticket or contacting"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/did-decentralized-identifier",
+        "description": "The content describes the features and products offered by NMKR, including Decentralized Identifiers (DID), products such as NMKR Studio, Mint, Pay, Token, and Pool, as well as information on NFTs, IPFS,"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/edit",
+        "description": "NMKR Docs is a website that provides information about NMKR products, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, along with support options such as creating support tickets, contacting via email or"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/export-metadata-as-zip",
+        "description": "The content is about accessing and exporting metadata as a zip file, and navigating the NMKR Docs website to find information about NMKR Studio and its features."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/export-nft-as-csv",
+        "description": "The content pertains to instructions on exporting NFT data as a CSV file from the documentation provided by NMKR on their platform."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/export-placeholder.csv",
+        "description": "The content discusses a placeholder.csv export from NMKR Docs containing various categories and features such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, NMKR Pool, contacts, support tickets, email, and Discord among other products"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/metadata-template",
+        "description": "The content includes a metadata template for NMKR Docs in English and Japanese, featuring products like NMKR Studio, Mint, Pay, Token, Pool, support features, and information on NFTs, IPFS, and Cardano."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/mint-and-send-jobs",
+        "description": "The content includes information about different products and features offered by NMKR, such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, along with guidance on creating a support ticket and accessing resources in English"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/notifications",
+        "description": "This content is a series of notifications about various products and contact information available on NMKR Docs website."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/policy",
+        "description": "NMKR Docs provides documentation related to various NMKR products and services such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, as well as information about NFTs, IPFS, and Card"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/policy/managing-policies",
+        "description": "Manage policies and information related to NMKR products and services through NMKR Docs, including NMKR Studio, Mint, Pay, Token, and Pool, with available support options via email and Discord."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/royalties",
+        "description": "NMKR Docs is a platform offering various products and services, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with information available in English and Japanese."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/project/statistics",
+        "description": "The content is about various products and services offered by NMKR, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, NMKR Pool, and the support options available for users."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales",
+        "description": "NMKR Docs website offers information on NMKR products including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, NMKR Pool, NMKR support, and instructional content on NMKR Studio features."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/auction",
+        "description": "The content mainly focuses on NMKR Docs, introducing the NMKR platform, its products, and features, with information available in both English and Japanese languages."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/block-tokens",
+        "description": "The content provides information about NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, NMKR Pool, and instructions on how to create a support ticket and access other resources."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/manage-prices-pricelist",
+        "description": "This content provides information about managing prices and pricelists on the NMKR website, along with a list of products and contact information."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/manage-prices-pricelist/create-new-prices",
+        "description": "This content is about creating new prices for various products in NMKR Docs in English and Japanese, including NMKR Studio, Mint, Pay, Token, and Pool, with support tickets, emails, and Discord contacts available."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/manage-prices-pricelist/custom-token-payment",
+        "description": "The content provides information about NMKR's custom token payment options and their various products such as NMKR Studio, Mint, Pay, Token, and Pool, along with general support information in English and Japanese languages."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/manage-prices-pricelist/discounts",
+        "description": "NMKR Docs provides information and documentation in multiple languages about NFTs, IPFS, Cardano, and NMKR Studio features."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/manage-prices-pricelist/free-drops",
+        "description": "This content appears to be advertising the services provided by NMKR, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with information available in English and Japanese, and offering support through email and Discord"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/nmkr-pay",
+        "description": "NMKR Docs provides information about various NMKR products such as NMKR Studio and NMKR Mint, offering tutorials on NMKR Studio features and how-to guides."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/nmkr-pay/1,%20width=%3C/span",
+        "description": "The content discusses the different products and services offered by NMKR, including NMKR Studio, NMKR Mint, NMKR Pay, and NMKR Token, as well as instructions on how to create a support ticket and access additional resources."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/nmkr-pay/1,%20width=%5C",
+        "description": "NMKR Docs provides information about NMKR products such as Studio, Mint, Pay, Token, and Pool, as well as guidance on creating support tickets, contacting through email and Discord, and learning NMKR Studio features and workflows."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/nmkr-pay/fiat-eth-and-sol-payment",
+        "description": "FIAT and cryptocurrencies like ETH and SOL can be used for payments on NMKR Docs for various services and products."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/nmkr-pay/manual-sending-in-nmkr-pay",
+        "description": "The content appears to be a list of different products and features offered by NMKR, along with contact information for support services."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/nmkr-pay/multisig-payment",
+        "description": "The content discusses the features and products offered by NMKR Docs, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, emphasizing creating support tickets, using emails, and engaging on Discord for assistance and"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/nmkr-pay/set-up-nmkr-pay",
+        "description": "NMKR offers a suite of products including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with information available in English and Japanese on NMKR Docs."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/nmkr-pay/specific-payment-links",
+        "description": "The content is about specific payment links and information related to NMKR Docs, including products, contact options, and support tickets."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/nmkr-pay/website-integration",
+        "description": "The website NMKR Docs provides information and support for various products including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with sections on products, contact information, and support options like creating support tickets,"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/pay-in-address",
+        "description": "This content appears to be a navigation panel or menu for NMKR (Newmark) products and resources, including documentation, support, and information on NFTs, IPFS, and Cardano, with a focus on NMKR Studio."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/sales-conditions-and-whitelisting",
+        "description": "The content is about sales conditions and whitelisting for NMKR products and includes information in English and Japanese about NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/sales-conditions-and-whitelisting/blacklist",
+        "description": "NMKR Docs provides information and documentation for products and services related to NMKR, covering topics such as NFTs, IPFS, Cardano, and features of NMKR Studio."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/sales-conditions-and-whitelisting/sales-conditions-depending-on-policy-id-or-stake-pool",
+        "description": "The content discusses sales conditions based on policy ID or stake pool in NMKR documentation."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/sales-conditions-and-whitelisting/test-sales-condition",
+        "description": "NMKR Docs offers information about NMKR's products and services, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, as well as support resources like creating a support ticket, contacting via email or"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/set-up-sales/sales-conditions-and-whitelisting/whitelist-with-count",
+        "description": "A whitelisted count of products and services offered by NMKR is available on their official documentation website, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/testnet",
+        "description": "The website content is about NMKR Docs and its products, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, as well as support ticket creation, email contact, and Discord communication in English and"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/testnet/create-testnet-account",
+        "description": "The content describes how to create a testnet account for the products offered by NMKR."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/testnet/testnet-api-swagger",
+        "description": "The content includes information about a Testnet API Swagger and the various products and features available on NMKR Docs, including NMKR Studio, Mint, Pay, Token, and Pool, as well as details on creating a support ticket and contact options."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/testnet/testnet-wallet-and-tada",
+        "description": "NMKR Docs website provides information about products such as NMKR Studio, NMKR Mint, and NMKR Pay along with supporting features, services, and contact information in multiple languages."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token",
+        "description": "The content is about the various products and features offered by NMKR, with information available in English, Japanese, and instructions on how to navigate their documentation."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/burn",
+        "description": "The content is about the documentation for various products and services offered by NMKR, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with information provided in both English and Japanese languages along with links"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/delete",
+        "description": "The content mentions various products and services offered by NMKR, including NMKR Docs in English and Japanese, NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with links to support and contact options."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/duplicate",
+        "description": "The content discusses NMKR Docs and its features, including products such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, as well as providing information on NFTs, IPFS, Cardano"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/edit",
+        "description": "The content is about a document page for NMKR products and services, including NMKR Studio, Mint, Pay, Token, and Pool, with features, support options, and information on NFTs, IPFS, and Cardano."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/manage-tokens-tab",
+        "description": "The Manage Tokens tab in NMKR Docs provides information on various products such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, along with contact links for support and communication channels like email and Discord."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/metadata",
+        "description": "The content on the NMKR Docs website covers information about NMKR products such as NMKR Studio, Mint, Pay, Token, and Pool, as well as guidance on creating support tickets, product features, and learning NMKR Studio in 3 minutes"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/metadata/add-token-specific-metadata",
+        "description": "The content provides information about adding token-specific metadata in NMKR Docs for various products and services such as NMKR Studio, Mint, Pay, Token, and Pool on the Cardano platform."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/metadata/cip-68",
+        "description": "The content details various products and services offered by NMKR, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, along with providing information on support options and guides for using NMKR Studio."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/metadata/fingerprint-metadata-preview",
+        "description": "This content is a preview of the metadata related to NMKR Docs, which covers information about NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool products, as well as support contact options like creating tickets,"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/metadata/fully-on-chain-nfts",
+        "description": "The content discusses the features and introduction of NMKR Docs, a platform powered by NMKR that focuses on fully on-chain NFTs, alongside offering various products like NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/metadata/fully-on-chain-nfts/partial-url-encoding",
+        "description": "The webpage provides information about NMKR products, including NMKR Studio, Mint, Pay, Token, and Pool, as well as guidance on creating support tickets and using Discord for communication."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/metadata/metadata-check",
+        "description": "The content includes a list of products associated with NMKR, instructions on creating a support ticket, contact information, and an introduction to NMKR Docs and NMKR Studio."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/metadata/metadata-standard-for-fungible-tokens",
+        "description": "The content describes a metadata standard for fungible tokens in various languages and lists different products and services offered by NMKR."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/update-edit-after-mint-reveal",
+        "description": "NMKR Docs offers a range of products such as Mint, Studio, Pay, Token, and Pool, along with online support via email and Discord, exploring topics related to NFTs, IPFS, and Cardano."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/upload",
+        "description": "The content is a website called NMKR Docs which provides information in English and Japanese about products such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, as well as support options like creating a support"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/upload/bulk-upload-files-and-metadata",
+        "description": "The content is about the bulk upload of files and metadata on NMKR Docs website and the various products and support options available."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/upload/bulk-upload-files-and-metadata/bulk-upload-via-drag-and-drop",
+        "description": "Bulk upload can be done through drag and drop on NMKR Docs website, which includes various products and support options like NMKR Studio, NMKR Mint, NMKR Pay, and NMKR Token."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/upload/bulk-upload-files-and-metadata/bulk-upload-via-sftp",
+        "description": "The content is about bulk uploading via SFTP on NMKR Docs website."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/token/upload/upload-single-tokens",
+        "description": "The content is a guide for uploading single tokens on NMKR Docs in multiple languages, including English and Japanese, covering products and support options like NMKR Studio, Mint, Pay, Pool, and creating a support ticket via email or Discord, while providing"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/tools",
+        "description": "The content lists the tools available on the NMKR Docs website, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, among others, with resources and information available in English and Japanese."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/tools/direct-sales",
+        "description": "NMKR Docs provides information and support for various products and services, including NMKR Studio, NMKR Mint, NMKR Pay, and NMKR Token, with information available in both English and Japanese languages."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/tools/integrations-and-plugins",
+        "description": "The content is a list of integrations and plugins available for NMKR products, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with additional options to create support tickets via email or Discord."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/tools/integrations-and-plugins/nft-pal",
+        "description": "This content provides an overview of NFT Pal/NMKR Docs website in multiple languages, highlighting the products offered such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, as well as information on"
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/tools/integrations-and-plugins/zapier",
+        "description": "The content discusses the features and introduction of NMKR Docs, including products like NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, along with contact options such as creating support tickets via email or Discord."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/tools/managed-wallets",
+        "description": "NMKR Docs provides information and support for a range of products including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/tools/policy-snapshot",
+        "description": "NMKR Docs provides information on various NMKR products such as NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, along with support and contact options."
+    },
+    {
+        "url": "https://docs.nmkr.io/nmkr-studio/tools/split-addresses",
+        "description": "The content discusses the different sections and options available on the NMKR Docs website related to products, contact information, support, and services, including NMKR Studio, NMKR Mint, NMKR Pay, NMKR Token, and NMKR Pool, with"
+    }
+]

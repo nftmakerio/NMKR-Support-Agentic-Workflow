@@ -1,0 +1,34 @@
+routing_task:
+  description: >
+    Take support request from the user, format it into a structured format so that the next agent can understand the user's request more clearly and work with it. The user's request is {support_request}.
+  expected_output: >
+    A structured output of the user's request and a clear distinguishing between business, technical and user. In precisely those exact words.
+  agent: routing_agent
+
+structuring_support_request_task:
+  description: >
+    Take support request from the user, format it into a structured format so that the next agent can understand the user's request more clearly and work with it. The user's request is {support_request}.
+  expected_output: >
+    A structured output of the user's request.
+  agent: structuring_support_request_agent
+
+business_development_support_task:
+  description: >
+    Provide the next agent with the information they need to complete the user's request about any business related questions.
+  expected_output: >
+    An answer to the user's request from a business development perspective, including any relevant information about NMKR's business.
+  agent: business_development_agent
+
+user_support_task:
+  description: >
+    Provide the next agent with the information they need to complete the user's request about any basic user questions that have nothing to do with with NMKR Studio but rather NMKR Pay or any drops by third parties that are using underlying NMRK technology.
+  expected_output: >
+    An answer to the user's request from a user support perspective, including any relevant information about NMKR's user support.
+  agent: user_support_agent
+
+technical_support_task:
+  description: >
+    Provide the next agent with the information they need to complete the user's request about any technical questions that have to do with NMKR Studio or the NMKR API.
+  expected_output: >
+    An answer to the user's request from a technical support perspective, including any relevant information about NMKR's technical support.
+  agent: technical_support_agent
