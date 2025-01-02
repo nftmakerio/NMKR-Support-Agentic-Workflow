@@ -160,16 +160,18 @@ async def health_check():
     try:
         # Check Redis connection
         redis_info = redis_conn.info()
+        redis_status = "healthy" if redis_info else "unhealthy"
         
         # Basic application status
         status = {
-            "status": "healthy",
+            "status": "healthy" if redis_status == "healthy" else "unhealthy",
             "timestamp": datetime.utcnow().isoformat(),
             "services": {
                 "api": "healthy",
-                "redis": "healthy" if redis_info else "unhealthy"
+                "redis": redis_status
             },
-            "port": PORT
+            "port": PORT,
+            "redis_url": REDIS_URL.replace(REDIS_URL.split('@')[-1], '***') if '@' in REDIS_URL else "redis://***",
         }
         return status
     except Exception as e:
@@ -177,7 +179,8 @@ async def health_check():
         return {
             "status": "unhealthy",
             "error": str(e),
-            "timestamp": datetime.utcnow().isoformat()
+            "timestamp": datetime.utcnow().isoformat(),
+            "redis_url": REDIS_URL.replace(REDIS_URL.split('@')[-1], '***') if '@' in REDIS_URL else "redis://***",
         }, 500
 
 if __name__ == "__main__":

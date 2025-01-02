@@ -17,15 +17,31 @@ services:
       failure_threshold: 3
     envs:
       - key: REDIS_URL
-        value: ${REDIS_URL}
+        scope: RUN_TIME
+        value: ${redis.DATABASE_URL}
       - key: OPENAI_API_KEY
+        scope: RUN_TIME
         value: ${OPENAI_API_KEY}
       - key: WEBHOOK_SECRET
+        scope: RUN_TIME
         value: ${WEBHOOK_SECRET}
       - key: PORT
         value: "8080"
 
+  - name: worker
+    dockerfile_path: Dockerfile
+    source_dir: .
+    command: rq worker nmkr_support
+    envs:
+      - key: REDIS_URL
+        scope: RUN_TIME
+        value: ${redis.DATABASE_URL}
+      - key: OPENAI_API_KEY
+        scope: RUN_TIME
+        value: ${OPENAI_API_KEY}
+
 databases:
   - name: redis
     engine: REDIS
-    version: "6" 
+    version: "6"
+    production: true 

@@ -1,6 +1,9 @@
 import sys
 import os
 from pathlib import Path
+import logging
+
+logger = logging.getLogger(__name__)
 
 # Add the project root to Python path
 project_root = str(Path(__file__).parent.parent.parent)
@@ -14,9 +17,20 @@ from typing import Dict, Any, Optional
 import json
 from datetime import datetime
 
-# Initialize Redis connection using environment variable
+# Get Redis URL from environment with fallback
 REDIS_URL = os.getenv('REDIS_URL', 'redis://localhost:6379')
-redis_conn = Redis.from_url(REDIS_URL)
+logger.info(f"Connecting to Redis at: {REDIS_URL}")
+
+try:
+    # Initialize Redis connection using environment variable
+    redis_conn = Redis.from_url(REDIS_URL)
+    # Test the connection
+    redis_conn.ping()
+    logger.info("Successfully connected to Redis")
+except Exception as e:
+    logger.error(f"Failed to connect to Redis: {e}")
+    raise
+
 task_queue = Queue('nmkr_support', connection=redis_conn)
 
 def process_support_request(inputs: Dict[str, Any]) -> Dict[str, Any]:
